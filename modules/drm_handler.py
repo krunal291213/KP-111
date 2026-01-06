@@ -247,9 +247,9 @@ async def drm_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -o "{name}.%(ext)s" -f "bestvideo[height<={raw_text2}]+bestaudio" --hls-prefer-ffmpeg --no-keep-video --remux-video mkv --no-warning "{url}"'
          
             elif "https://cpvod.testbook.com/" in url or "classplusapp.com/drm/" in url:
-                url = url.replace("https://covercel.vercel.app/extract_keys?url={video_url}&user_id={user_id}")
+                url = url.replace("https://covercel.vercel.app/extract_keys?url={url}@Pt0056&user_id={user_id}")
                 try:
-                    url = f"https://covercel.vercel.app/extract_keys?url={url}&user_id={user_id}"
+                    url = f"https://covercel.vercel.app/extract_keys?url={url}@Pt0056&user_id={user_id}"
                     response = requests.get(url)
                     data = response.json()
                     if data.get("keys") and "url" in data:
